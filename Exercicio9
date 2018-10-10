@@ -1,0 +1,30 @@
+//9.	Faça um algoritmo que receba um número inteiro, que representa um determinado mês do ano, e mostre o nome do mês correspondente. 
+//Por exemplo, se for informado o número 2, algoritmo deverá exibir fevereiro. O algoritmo deve validar se a entrada está correta.
+package teste;
+
+import java.util.Scanner;
+
+public class testa {
+
+    public static void main(String[] args) {
+        int mes;
+        Scanner entrada = new Scanner (System.in);
+        
+        System.out.println("Entre com o mês");
+        mes = entrada.nextInt();
+        switch (mes){
+            case 1: System.out.println("Janeiro");
+                break;
+            case 2: System.out.println("Fevereiro");
+                break;
+            case 3: System.out.println("Março");
+                break;
+            case 4: System.out.println("Abril");
+                break;
+            case 12: System.out.println("Dezembro");
+                break;
+            default:
+                System.out.println("Mês inválido");
+        }
+    }
+ }
