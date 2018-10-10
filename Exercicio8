@@ -1,0 +1,42 @@
+//Os endereços IP versão 4 são divididos em cinco classes: A, B, C, D e E. Os endereços no intervalo de 0 à 127 são classe A, 
+//de 128 à 191 são classe B, de 192 à 223 são classe C, de 224 à 239 são classe D e a partir de 240 
+//são classe E. Faça um algoritmo que leia o primeiro octeto, no formato decimal, de um endereço IP e informe a sua classe.
+package listaexercicios2;
+
+import java.util.Scanner;
+
+public class Exercicio8 {
+    public static void main(String[] args) {
+        int ip;
+        Scanner entrada = new Scanner(System.in);
+        
+        System.out.print("Entre com o endereço IP: ");
+        ip = entrada.nextInt();
+        if ((ip >= 0) && (ip <= 127)) {
+            System.out.println("IP classe A");
+        }
+        else {
+            if ((ip >= 128) && (ip <= 191)) {
+                System.out.println("IP classe B");
+            }
+            else {
+                if ((ip >= 192) && (ip <= 223)) {
+                    System.out.println("IP classe C");
+                }
+                else {
+                    if ((ip >= 224) && (ip <= 239)) {
+                        System.out.println("IP classe D");
+                    }
+                    else {
+                        if ((ip >= 240) && (ip <= 255)) {
+                            System.out.println("IP classe E");
+                        }
+                        else {
+                            System.out.println("IP inválido");
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
